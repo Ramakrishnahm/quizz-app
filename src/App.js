@@ -6,7 +6,9 @@ import Home from "./components/Home";
 import NavBar from "./navbar/Navbar";
 import "./App.css";
 import Cards from "./cards/Cards";
-import Quizz from "./cards/Quizz";
+
+import { Instructions } from "./components/Instructions";
+ import Questions from './questions/Questions'
 
 function App() {
   return (
@@ -16,10 +18,15 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="signup" element={<Signup />} />
         <Route path="home" element={<Home />}>
-          <Route path="quizz" element={<Quizz />} />
+      
           <Route path="cards" element={<Cards />} />
+         
         </Route>
+         <Route path="questions" element={<Questions />} /> 
+         <Route path="instructions" element={<Instructions />} /> 
       </Routes>
+      {/* <Instructions/>
+        <Listofquestion/>   */}
     </div>
   );
 }

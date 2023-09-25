@@ -1,8 +1,14 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import './card.css'
-const Card = ({data}) => {
+const Card = (props) => {
+const {title,description} = props.data
+  
+  
+  const navigate = useNavigate();
  
-  const { title, questions } = data;
+ 
   const [colors] = useState(["green", "yellow", "lightblue", "black"]);
 
   const getRandomColor = () => {
@@ -12,10 +18,11 @@ const Card = ({data}) => {
 
   return (
     <div className="cardlist" style={{ backgroundColor: getRandomColor() }}>
-      <div>
+      <div> 
+       
         <h1>{title}</h1>
-        <p>{questions}</p>
-        <button className="btn">
+        <p>{description}</p>
+        <button className="btn" onClick = {() => {navigate("/Instructions")}} >
           Start-Quizz
         </button>
       </div>

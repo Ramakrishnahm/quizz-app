@@ -13,6 +13,10 @@ const NavBar = () => {
       <NavLink className={Styles} to="/signup">
         Signup
       </NavLink>
+
+      {/* <NavLink className={Styles} to="/Listofquestion">
+        Listofquestions
+      </NavLink> */}
       <br />
       <Outlet />
     </nav>

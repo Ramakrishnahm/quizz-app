@@ -1,14 +1,17 @@
 import Cards from "../cards/Cards";
-import { Link, Outlet } from "react-router-dom";
+
+
+
 const Home = () => {
   return (
     <>
+    <h2 style={{color:"green"}}>Quiz List </h2>
       <Cards />
-      {/* <Link className="nav-link" to="quizz">
-        Quizz works
-      </Link> */}
-      <br />
-      <Outlet />
+      
+      
+      
+      
+      
     </>
   );
 };

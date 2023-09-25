@@ -1,7 +1,7 @@
 .login {
-    box-shadow: 0 4px 8px rgba(0, 0, 150, 0.2);
+    box-shadow: gray;
     width: 350px;
-    margin: 10px auto;
+    margin:  auto;
     padding: 30px;
     background-color: #fff;
     border-radius: 10px;

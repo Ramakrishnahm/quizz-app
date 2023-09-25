@@ -3,11 +3,11 @@ import './login.css'
 import { useNavigate } from "react-router-dom";
 const Login = () => {
   const navigate = useNavigate();
-  const [login, setLogin] = useState({ password: "", email: "" });
-
-  function handleChange(e) {
-    const { name, value } = e && e.target;
-    setLogin((prev) => ({ ...prev, [name]: value }));
+  const [login, setLogin] = useState({  email: "",password: "" });
+  const {password,email} = login;
+  function handleChange   (e)  {
+  setLogin({...login,[e.target.name]:e.target.value})
+  
   }
 
   function handleSubmit(e) {
@@ -26,7 +26,7 @@ const Login = () => {
           name="email"
           type="email"
           placeholder=" Email"
-          value={login.email}
+          value={email}
           onChange={handleChange}
         />
       
@@ -37,7 +37,7 @@ const Login = () => {
           name="password"
           type="password"
           placeholder="Password"
-          value={login.password}
+          value={password}
           onChange={handleChange}
         />
         <button className=" login-btn" type="submit">
